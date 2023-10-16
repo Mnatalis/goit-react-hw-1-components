@@ -1,0 +1,45 @@
+.statistics {
+  text-align: center;
+  margin-left: 600px;
+  margin-right: 600px;
+  background-color: gainsboro;
+}
+
+.title {
+  text-align: center;
+  font-size: 25px;
+  color: #444343;
+  font-weight: bold;
+  background-color: white;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+
+  padding: 0;
+  background-color: grey;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid white;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.label {
+  font-size: 13px;
+  color: white;
+
+  padding: 8px 8px;
+}
+
+.percentage {
+  font-weight: bold;
+  color: white;
+}
