@@ -1,19 +1,19 @@
 import css from './Statistics.module.css';
 
-const Statistics = ({ title, stats }) => {
+export const Statistics = ({ title, stats }) => {
+  const allLabels = stats.map(item => {
+    return (
+      <li key={item.id} className={css.item}>
+        <p className={css.label}>{item.label}</p>
+        <span className={css.percentage}>{item.percentage}%</span>
+      </li>
+    );
+  });
+
   return (
-    <div className={css.statistics}>
-      <h2 className={css.title}>{title}</h2>
-      <ul className={css.stats}>
-        {stats.map((stat, index) => (
-          <li key={stat.id} className={css.list}>
-            <span className={css.label}>{stat.label}</span>
-            <span className={css.percentage}>{stat.percentage}%</span>
-          </li>
-        ))}
-      </ul>
+    <div className={css.wrapper}>
+      {title && <h2 className={css.title}>{title}</h2>}
+      <ul className={css.list}>{allLabels}</ul>
     </div>
   );
 };
-
-export default Statistics;
