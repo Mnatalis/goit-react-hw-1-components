@@ -1,19 +1,19 @@
+import css from './FriendList.module.css';
+
 export const FriendListItem = ({ friends }) => {
   const items = friends.map(item => {
     return (
-      <li className="item" key={item.id}>
-        <span></span>
+      <li className={css.item} key={item.id}>
+        <span className={item.isOnline ? css.statuson : css.statusoff}></span>
         <img
-          className="avatar"
+          className={css.avatar}
           src={item.avatar}
           alt="User avatar"
           width="48"
         />
-        <p className="name">{item.name}</p>
+        <p className={css.name}>{item.name}</p>
       </li>
     );
   });
   return items;
 };
-
-// className={item.isOnline ? style.statuson : style.statusoff}
